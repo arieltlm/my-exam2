@@ -16,17 +16,19 @@ const userInfo = state => state.login
 const { url: { app } } = config
 
 const appUrls = [{
-    id: 'datasource',
-    menuName: '数据源管理',
-    menuId: 'datasource',
+    id: 'pipeline',
+    menuName: 'pipeline',
+    menuId: 'pipeline',
     icon: 'cona-shujuyuanguanli',
-    url: app.datasourceManage.path,
+    url: app.pipeline.path,
     // component: lazyload(import('@/datasource-manage/components/main'))
     component: lazyload(import('@/req-test/components/main'))
 }]
 
 const selector = createSelector([userInfo], store => {
-    const resources = store.get('resources').toJS()
+    // const resources = store.get('resources').toJS()
+    console.log(store)
+    const resources = [{ id: 122, en: 'pipeline', cn: 'pipeline组件' }] 
     const navModules = []
     appUrls.forEach(appItem => {
         const it = resources.find(item => item.en === appItem.menuId)

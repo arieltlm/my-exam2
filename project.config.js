@@ -12,7 +12,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ip = 'localhost'
 // const ip = '0.0.0.0'
 
-const port = 4444
+const port = 4445
 const ROOT_PATH = path.resolve(__dirname, './')
 const APP_PATH = path.resolve(ROOT_PATH, 'src')
 const projectEnName = 'example'
@@ -307,22 +307,6 @@ const proxies = [{
     headers: {
     },
     paths: ['/api']
-}, {
-    target: `http://${ip}`,
-    proxyPort: 9000,
-    headers: {
-    },
-    paths: ['/dsm-web']
-}, {
-    target: 'http://ws04.mlamp.cn', // 正熙环境
-    proxyPort: 12139, // 正熙环境
-    // target: 'http://172.21.1.185', // 海元uums
-    // proxyPort: 8898,//海元uums
-    // proxyPort: 3344, // 海元uums
-    headers: {
-        hosts: ''
-    },
-    paths: ['/dsm-web']
 }]
 
 const devServer = {

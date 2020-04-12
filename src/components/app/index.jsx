@@ -1,6 +1,6 @@
 /**
  * 功能：受限组件入口
- * 作者：安超
+ * 作者：
  * 日期： 2018/3/19
  */
 import {
@@ -19,7 +19,7 @@ class App extends PureComponent {
     constructor(props){
         super(props)
         this.state = {
-            loadedUserInfo: false,
+            loadedUserInfo: true,
             username: '',
             tenantConfig: ''
         }
@@ -52,10 +52,6 @@ class App extends PureComponent {
             console.log(err)
         }
         if (loadedUserInfo) {
-            // 暂时隐去登陆
-            // if (username.length === 0) {
-            //     return null
-            // }
             return (
                 <div styleName="chief">
                     <Header

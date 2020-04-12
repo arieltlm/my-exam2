@@ -1,10 +1,7 @@
 /*
- * Created by anchao on 2016/6/29.
  */
 import { Menu } from 'antd'
 import { React, PropTypes, NavLink, withRouter } from 'framework/Util'
-// import config from 'conf'
-// import dialog from 'dialog'
 import UserDropDown from '../user-drop-down'
 import './scss/index.scss'
 
@@ -16,16 +13,6 @@ const Header = function ({
 }) {
     const logoutFn = () => {
         logout()
-        // .then(res => {
-        //     if (res.statusCode === 200) {
-        //         history.replace(config.url.login.path)
-        //     } else {
-        //         dialog.alert({
-        //             infoType: 'error',
-        //             content: <div>{res.message}</div>
-        //         })
-        //     }
-        // })
     }
 
 
@@ -34,13 +21,13 @@ const Header = function ({
             <div className="pull-left app-title">
                 {logoHref ? (
                     <a target="_blank" className="logo-href" rel="noopener noreferrer" href={logoHref}>
-                        <span className="logo cona-logo cona" />
-                        <span className="app-name">知识中心</span>  
+                        <span className="logo" />
+                        <span className="app-name">test中心</span>
                     </a>
                 ) : (
                     <>
-                        <span className="logo cona-logo cona" />
-                        <span className="app-name">知识中心</span>  
+                        <span className="logo" />
+                        <span className="app-name">test中心</span>
                     </>
                 )}
             </div>
@@ -48,12 +35,8 @@ const Header = function ({
                 <Menu mode="horizontal" theme="dark" className="custom-header-nav">
                     <Menu.Item>
                         {resources?.map(item => (
-                            <NavLink
-                                replace
-                                to={item.url}
-                                key={item.id}
-                                activeClassName="active"
-                            ><span className={`${item.icon} cona`} />
+                            <NavLink replace to={item.url} key={item.id} activeClassName="active">
+                                <span className={`${item.icon} cona`} />
                                 {item.cn || item.menuName}
                             </NavLink>
                         ))}
@@ -61,10 +44,7 @@ const Header = function ({
                 </Menu>
             </div>
             <div className="pull-right headrright">
-                <UserDropDown
-                    username={username}
-                    logout={logoutFn}
-                />
+                <UserDropDown username={username} logout={logoutFn} />
             </div>
         </div>
     )

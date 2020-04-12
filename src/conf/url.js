@@ -12,8 +12,8 @@ const url = {
         errorAuthority: { 
             path: '/app/403'
         },
-        datasourceManage: {
-            path: '/app/datasource-manage'
+        pipeline: {
+            path: '/app/pipeline'
         },
     }
 }

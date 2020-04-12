@@ -4,8 +4,7 @@
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 import './css/index.scss'
-// import './css/common/theme/light/antd-ext.less'
-import 'antd-theme-fe-ml/theme/graph/antd-ext.less'
+import './css/common/theme/light/antd-ext.less'
 import projectInit from './framework/projectInit'
 
 projectInit(document.querySelector('#container'), () => {

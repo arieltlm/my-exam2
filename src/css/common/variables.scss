@@ -243,49 +243,8 @@ $header-fa-power-hover-color:$white;
 // error组件------------------------------------
 $error-bg-color:$text-component-color;
 $error-border-color: $border-color-base;
-// 显示字段按钮----------------------------
-$table-header-show-btn-all-sel-border:$border-color-base;
-$table-header-show-btn-dropdown-shadow:rgba($black, 0.175);
-$table-header-show-btn-dropdown-item-hover:$bg-item-hover-color;
+
 /***********************components中的组件end*****************************/
 /***********************模块中的start*************************************/
-// 数据源管理-----------------------
-$datasource-manage-bg:$bg-main-color;
-$datasource-manage-panel-bg:$white;
-$datasource-title-panel-color:$menu-submenu-item-color;
-$datasource-title-border-color:$gray-e2;
-$datasource-table-highlight-bg:$bg-item-hover-color;
-$datasource-table-highlight-border:$border-active-color-base;
-$datasource-table-status-success-bg:$status-success-color;
-$datasource-table-status-error-bg:$status-error-color;
-$datasource-info-boxshadow-color:rgba($black,0.15);
-$datasource-info-border-left-color:$border-component-color;
-$datasource-info-status-success:$status-success-color;
-$datasource-info-status-error:$status-error-color;
-$datasource-resize-btn-bg:$gray-d8;
-$datasource-create-link-wait-color: $status-wait-color;
-$datasource-create-link-success-color: $status-other-finish;
-$datasource-create-link-error-color: $status-error-color;
-$datasource-create-link-runing-color: $status-processing-color;
-$datasource-create-link-wait-bg-color: $status-wait-bg-color;
-$datasource-create-link-success-bg-color: $status-success-bg-color;
-$datasource-create-link-error-bg-color: $status-error-bg-color;
-$datasource-create-link-runing-bg-color: $status-processing-bg-color;
 
-$datasource-sync-status-delete-color: $status-error-color;
-$datasource-sync-status-delete-bg-color: $status-error-bg-color;
-$datasource-sync-status-synced-color: $status-processing-color;
-$datasource-sync-status-synced-bg-color: $status-processing-bg-color;
-$datasource-sync-status-refreshed-color: $status-success-color;
-$datasource-sync-status-refreshed-bg-color: $status-success-bg-color;
-$datasource-sync-sel-num-color:$text-component-color;
-$datasource-sync-list-no-text-color:$stress-color;
-
-$datasource-origin-field-tag-purple-border-color:$bg-component-color;
-$datasource-origin-field-tag-orange-border-color:$status-wait-color;
-$datasource-origin-field-tag-orange-bg-color:$status-wait-bg-color;
-$datasource-origin-field-tag-green-border-color:$status-success-color;
-$datasource-origin-field-tag-green-bg-color:$status-success-bg-color;
-$datasource-sync-list-active-bg-color:$bg-component-color;
-$datasource-sync-list-active-text-color:$white;
 /***********************模块中的end*************************************/

@@ -68,7 +68,6 @@ const repeatReq = (url, methods, query, key) => new Promise((resolve, reject) =>
 const waitBeforeReq = (currentReq, key) => new Promise(resolve => {
     // const interval = setInterval(() => {
     // if (cacheObj[key].data && cacheObj[key]?.status === 'free' && currentReq.readyState === 4) {
-    debugger
     currentReq.addEventListener('load', function () {
         // clearInterval(interval)
         resolve(cacheObj[key].data)

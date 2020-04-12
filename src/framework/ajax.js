@@ -1,6 +1,6 @@
 /**
  * 功能：ajax 统一配置
- * 作者：安超
+ * 作者：
  * 日期：2019-05-30
  */
 import axios from 'axios'
