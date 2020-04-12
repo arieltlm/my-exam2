@@ -86,7 +86,7 @@ class ReactComponentBase extends React.PureComponent {
     }
     
     setDocTitle = () => {
-        let docTitle = '数据源管理'
+        let docTitle = '测试工程'
         const pathname = window.location.hash.slice(1)
         
         if (pathname === login.path) {
