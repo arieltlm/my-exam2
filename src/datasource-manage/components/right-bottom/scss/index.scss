@@ -1,0 +1,41 @@
+.right-origin-table {
+    @include size(100%, calc(100% - 88px - 16px));
+    background: $datasource-manage-panel-bg;
+
+    :global {
+        .title-box {
+            @include size(100%, 48px);
+            border-bottom: 1px solid $datasource-title-border-color;
+            padding-left: $space-lg;
+            line-height: 48px;
+            color: $datasource-title-panel-color;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .content-box {
+            @include size(100%, calc(100% - 48px));
+            padding: $space-md $space-lg;
+
+            .btn-groups {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: $space-md;
+            }
+
+            .table-box {
+                @include size(100%, calc(100% - #{$space-md} * 3 - 32px));
+            }
+
+            .click-btn {
+                margin: 0;
+                max-width: 110px;
+                // width: 100%;
+                overflow: hidden;
+                text-align: left;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+}

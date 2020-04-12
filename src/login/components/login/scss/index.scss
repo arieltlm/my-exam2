@@ -1,0 +1,156 @@
+#particles-js {
+    @include size(100%, 100%);
+}
+
+.login-login {
+    background: $login-bg-color;
+    height: 100%;
+
+    :global {
+        .login-box-main {
+            @include size(500px, 316px);
+            @include opacity(0.8);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -158px;
+            margin-left: -250px;
+            border: 1px solid $login-main-border-color;
+            background: url("../images/logo.png") no-repeat center 28px $login-main-bg-color;
+            overflow: hidden;
+
+            .input-group {
+                @include size(280px, 72px);
+                position: relative;
+                margin: 82px auto 0;
+
+                input {
+                    @include size(100%, 32px);
+                    border: 1px solid $gray-dd;
+                    border-radius: 2px;
+                    padding-left: 40px;
+                    line-height: 34px;
+
+                    &.login-user {
+                        margin-bottom: 13px;
+                        background-color: $white;
+                    }
+
+                    &.login-pwd {
+                        background-color: $white;
+                    }
+                }
+
+                input:-webkit-autofill {
+                    color: $white !important;
+                    transition: all 5000s ease-in-out 0s;
+                }
+
+                input:focus {
+                    border: 1px solid $login-box-input-focus;
+                    border-radius: 2px;
+                    outline-width: 0;
+                }
+
+                input.error {
+                    border: 1px solid $errorred;
+                }
+
+                > i {
+                    position: absolute;
+                    top: 9px;
+                    left: 10px;
+                    color: $login-btn-bg-color;
+                }
+
+                .pwdico {
+                    top: 54px;
+                    font-size: 1.7em;
+                }
+            }
+
+            .login-btn {
+                @include size(280px, 82px);
+                margin: 2px auto;
+
+                > div {
+                    margin: 0;
+                }
+
+                .login-remember {
+                    @include size(20px, 20px);
+                    display: block;
+                    float: left;
+                    margin-right: 10px;
+                    cursor: pointer;
+
+                    > input {
+                        @include size(16px, 16px);
+                    }
+                }
+
+                .checked .login-remember {
+                    background-position: -60px -30px;
+                }
+
+                .login-button {
+                    @include size(100%, 30px);
+                    border: 0;
+                    border-radius: 2px;
+                    background: $login-btn-bg-color;
+                    color: $white;
+                }
+
+                .rolerow {
+                    margin-top: 13px;
+
+                    .role {
+                        margin-right: 30px;
+                        line-height: 25px;
+
+                        span {
+                            @include size(14px,14px);
+                            display: inline-block;
+                            margin-right: 5px;
+                            border: 1px solid $gray-cc;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            overflow: hidden;
+
+                            &.checked {
+                                border-width: 0;
+                                background-color: $login-role-checked;
+                            }
+                        }
+                    }
+
+                    a {
+                        text-decoration: underline;
+                        color: $gray-66;
+
+                        &:hover {
+                            color: $login-btn-bg-color;
+                        }
+                    }
+                }
+
+                .errors {
+                    height: 22px;
+                    padding-left: 26px;
+                    text-align: right;
+                    line-height: 22px;
+                    color: $errorred;
+                    font-size: 12px;
+
+                    > i {
+                        margin-right: 5px;
+                    }
+                }
+
+                .errors + div {
+                    padding-top: 6px;
+                }
+            }
+        }
+    }
+}

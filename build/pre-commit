@@ -1,0 +1,67 @@
+#!/bin/bash
+
+# --cached 可以查看暂存区与当前 HEAD 指针指向版本之间的差异
+# HEAD 查看workspace 和local repository 的差别的
+
+DIFFTYPE="--cached"
+
+if [[ "$1" == "lintall" ]]; then
+    DIFFTYPE="HEAD"
+fi
+
+STAGED_FILES_JS=$(git diff $DIFFTYPE --name-only --diff-filter=ACM | grep -E "(.js(x?))$")
+STAGED_FILES_SCSS=$(git diff $DIFFTYPE --name-only --diff-filter=ACM | grep -E "(.scss)$" | grep -Ev "^(src/css)")
+
+if [[ "$STAGED_FILES_JS" == "" &&  "$STAGED_FILES_SCSS" == "" ]]; then
+  exit 0
+fi
+
+PASS=true
+
+echo "\n开始代码检查, 先检查js代码，通过后检查scss代码...\n"
+
+which node_modules/.bin/eslint &> /dev/null
+if [[ "$?" == 1 ]]; then
+  echo "\t\033[41m 请安装 ESlint\033[0m"
+  exit 1
+fi
+
+which node_modules/.bin/stylelint &> /dev/null
+if [[ "$?" == 1 ]]; then
+  echo "\t\033[41m 请安装 stylelint\033[0m"
+  exit 1
+fi
+
+for FILE in $STAGED_FILES_JS
+do
+  node_modules/.bin/eslint --config .eslintrc.js --format node_modules/eslint-friendly-formatter "$FILE" --cache --fix --no-ignore
+  if [[ "$?" == 0 ]]; then
+    echo "\t\033[32mesLint Passed: $FILE\033[0m"
+  else
+    echo "\t\033[41mesLint Failed: $FILE\033[0m"
+    PASS=false
+  fi
+done
+echo "\nJavascript validation completed!\n"
+if ! $PASS; then
+  echo "\033[41mCOMMIT FAILED:\033[0m 你的提交里包含不符合eslint规则的代码，请检查....\n"
+  exit 1
+else
+  for FILE in $STAGED_FILES_SCSS
+    do
+      node_modules/.bin/stylelint "$FILE" --syntax scss --fix
+      if [[ "$?" == 0 ]]; then
+        echo "\t\033[32mstyleLint Passed: $FILE\033[0m"
+      else
+        echo "\t\033[41mstyleLint Failed: $FILE\033[0m"
+        PASS=false
+      fi
+    done
+    if ! $PASS; then
+      echo "\033[41mCOMMIT FAILED:\033[0m 你的提交里包含不符合stylelint规则的代码，请检查....\n"
+      exit 1
+    else
+      echo "\033[42m 代码符合规范\033[0m\n"
+    fi
+fi
+exit $?

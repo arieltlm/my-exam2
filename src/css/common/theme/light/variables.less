@@ -1,0 +1,972 @@
+/*以下为主题相关配色*/
+/*颜色序列*/
+@white: #fff;
+@black: #000;
+
+@gray-99: #999999;
+@gray-c6: #c6c6c6;
+@gray-f6: #f6f6f6;
+@gray-d8: #d8d8d8;
+@gray-b5: #b5b5b5;
+@gray-f7: #f7f7f7;
+@gray-e2: #e2e2e2;
+@gray-66: #666666;
+@gray-f8: #f8f8f8;
+@gray-f2: #f2f2f2;
+
+/*导航，如顶部导航*/
+// @nav-bg-start-color: #18437c;
+@nav-bg-start-color:  #1d1f24;
+@nav-bg-end-color: #0167a8;
+@nav-bg-color: linear-gradient(90deg, @nav-bg-start-color, @nav-bg-end-color);
+@nav-box-shadow: 0px 2px 12px 0px rgba(#5290d7, 1);
+
+/*页面模块*/
+@body-bg-color: @gray-f2; // 页面背景色
+@module-bg-color: @white; // 模块背景色
+@module-border-color: @gray-d8; // 模块边框色
+@module-title-bg-color: @white; // 模块标题背景色
+@module-title-border-color: @module-border-color; // 模块标题边框色
+@module-box-shadow: 0px 2px 12px 0px rgba(#000f21, 1);
+@hint-bg-color: #4c4c4c;
+
+/*菜单栏，如左侧导航菜单等*/
+@menu-bar-bg-start-color: #163762;
+@menu-bar-bg-end-color: #0c2b4f;
+@menu-bar-bg-color: linear-gradient(180deg, @menu-bar-bg-start-color, @menu-bar-bg-end-color);
+@menu-bar-item-color: @description-text-color;
+@menu-bar-item-hover-color: #a1c2ff;
+@menu-bar-item-active-color: @default-text-color;
+@menu-bar-item-hover-bg-color: #042145;
+@menu-bar-first-level-active-bg-color: #001936;
+@menu-bar-second-level-active-bg-color: #15233a;
+@menu-bar-box-shadow: 0px 2px 12px 0px rgba(#265c9a, 1);
+
+/*文字相关*/
+@title-color: @white; // 模块大标题 / 弹窗标题 / 特殊标题
+@text-color: #111; // 正常文字 / 段落文字 / 表格表单文字 / 主按钮文字等
+@sub-color: @white; // 图表xy标尺 / 相关辅助解释性文字
+@text-default-color: #111; //下拉框 / 选择框 / 输入框文字等
+@selected-color: @white;
+/*用于按钮、link、icon等*/
+// @default-text-color: #3190ff;
+@default-text-color: #4a62e7;
+@default-text-hover-color: @white;
+@default-text-click-color: #00cabf;
+@description-text-color: #abbde5; //描述性文字
+@hint-text-color: @gray-99;
+@placeholder-color: @gray-b5; // 输入、select等提示文字颜色
+@component-icon-color: @placeholder-color; // selec、menu等的展开收起图标
+@component-icon-hover-color: @default-text-color;
+
+/*链接文字相关*/
+@link-color: @default-text-color;
+@link-hover-color: @default-text-hover-color;
+@link-active-color: @default-text-click-color;
+
+/*面包屑*/
+@bread-text-normal-color: @disabled-color;
+@bread-text-link-color: @default-text-color;
+@bread-text-hover-color: @bg-hover-color;
+@bread-text-active-color: @bg-active-color;
+@bread-text-current-color: @white;
+//@bread-text-disabled-color: @default-text-disabled-color;
+@bread-bar-box-shadow: 0px 2px 12px 0px rgba(#265c9a, 1);
+
+/*icon相关*/
+@icon-color: @default-text-color;
+@icon-color-hover: @hint-text-color;
+@icon-color-chilk: @default-text-click-color;
+@icon-color-close: #9da3af;
+
+/*边框，除disable状态外，目前组件边框分为4种*/
+/*普通按钮、tab（card）、tag*/
+@border-color: @default-text-color;
+@border-hover-color: transparent;
+@border-active-color: @default-text-click-color;
+@border-divider: @gray-99;
+/*悬浮类菜单、气泡等*/
+// @border-menu-color: #3190ff;
+@border-menu-color: #4a62e7;
+/*表单，如input等可输入的，通border-color-base*/
+@border-color-base: @border-menu-color;
+@border-hover-color-base: @default-text-color;
+@border-active-color-base: @default-text-color;
+
+/*投影悬浮类菜单、气泡等*/
+@box-shadow-base: 0px 2px 12px 0px transparent;
+
+/*背景色*/
+// @bg-color: #eaf3ff; // 组件背景色： 如普通按钮、tabs(card)、tag等
+@bg-color: #eceffc; // 组件背景色： 如普通按钮、tabs(card)、tag等
+// @bg-hover-color: #67adff;
+@bg-hover-color: #768df5;
+@bg-active-color: #2582ef;
+@bg-item-hover-color: @gray-f6;
+
+@bg-color-base: @white; // 表单输入类组件背景色，如输入框、select等
+@bg-hover-color-base: @bg-color;
+@bg-active-color-base: @bg-color;
+
+/*块级区域背景色，如主按钮、tabs页签的选中效果等*/
+@lump-start-color: #39c8fa;
+@lump-end-color: #0060c7;
+// @lump-bg-color: #3190ff;
+@lump-bg-color: #4a62e7;
+
+
+/*状态配色，注意：状态颜色需统一*/
+/*用于错误警示等*/
+@status-error-color: #e73047; // 内容色
+@status-error-border-color: @status-error-color; // 边框色
+@status-error-bg-color: #fceaec; // 背景色
+@status-danger-bg-color: #fceaec;
+
+/*用于等待/ 一般提示/等*/
+@status-wait-color: #ffbf00;
+@status-wait-border-color: @status-wait-color;
+@status-wait-bg-color: #fff8e5;
+
+/*成功状态*/
+@status-success-color: #7cd322;
+@status-success-border-color: @status-success-color;
+@status-success-bg-color: #f1fae8;
+
+/*运行状态/解释性说明*/
+@status-processing-color: #3ec8f7;
+@status-processing-border-color: @status-processing-color;
+@status-processing-bg-color:#e5faff;
+
+/*停止状态*/
+@status-stop-color: #8939f1;
+@status-stop-border-color: @status-stop-color;
+@status-stop-bg-color: #f3ebfd;
+
+/*其他状态*/
+@status-other-color: #0078ff;
+@status-other-border-color: @status-other-color;
+@status-other-bg-color: #eaf3ff;
+@status-other-finish: #7cd322;
+@status-other-wait: #ffbf00;
+
+/*disable状态相关*/
+@disabled-color: #b5b5b5; // 文字色
+@disabled-bg: #f8f8f8; // 背景色
+@disabled-border: @gray-d8; // 边框色
+
+/*间距*/
+@space-container: 24px; // 页面内间距、内容内边距、模块间间距
+@space-module: 16px; // 按钮的左右内间距、内容间的间距、内嵌型页面内边距，如输入框横向之间的间距、tab内容区内的模块中嵌入的内容
+@space-distance: 12px; // 输入框等内容的内间距，模块中底部操作按钮的上下间距等
+@space-sub: 8px; // icon与内容之间的距离、icon与输入框等边框之间的距离、表单中说明文字与输入框的距离
+@space-tab: 36px; // 非卡片式tab的间距
+
+/*高度*/
+@height-nav: 64px; // 缩小后导航的高度
+@height-bread: 54px; // 面包屑高度
+@height-main: 32px; // 输入框、menu等高度
+@height-sub: 40px; // table的行高、message的高度等
+@height-header: 48px; // tab页签高度、部分模块header的高度等
+@height-item: 24px; // 主要针对timepicker的选项高度等
+
+/*****************************/
+
+/***************************************/
+
+/*以下为antd通用相关配置*/
+//@primary-color: @blue-6;
+@body-background: @body-bg-color;
+@component-background: @module-bg-color;
+@heading-color: @text-default-color; // 标题色
+@title-font-size: 16px;
+@title-font-weight: bold;
+@content-font-size: 14px;
+@small-font-size: 12px;
+@border-radius-base: 2px;
+@border-radius-sub: 4px;
+@leader-font-weight: 500;
+
+/***************************************/
+
+/*按钮相关*/
+@btn-padding-base: 0 @space-module;
+@btn-padding-sm: 0 @space-sub;
+@btn-font-size-sm: @small-font-size;
+@btn-border-radius-base: @border-radius-base;
+@btn-border-radius-sm: @border-radius-base;
+
+// 主按钮
+@btn-primary-color: @selected-color;
+@btn-primary-bg: @lump-bg-color;
+@btn-primary-hover-bg: @bg-hover-color;
+@btn-primary-active-bg: #0d75ed;
+@btn-primary-border: transparent;
+
+// 普通按钮
+@btn-default-color: @default-text-color;
+@btn-default-bg: @bg-color;
+@btn-default-border: @border-color;
+@btn-default-hover-color: @default-text-hover-color;
+@btn-default-hover-bg: @bg-hover-color;
+@btn-default-hover-border: @border-hover-color;
+@btn-default-active-color: @default-text-hover-color;
+@btn-default-active-bg: @bg-active-color;
+@btn-default-active-border: transparent;
+
+// 线框按钮
+@btn-dashed-color: @text-default-color;
+@btn-dashed-bg: @bg-color-base;
+@btn-dashed-border: 1px solid @module-border-color;
+@btn-dashed-hover-color: @text-default-color;
+@btn-dashed-hover-bg: @bg-item-hover-color;
+@btn-dashed-hover-border: @module-border-color;
+@btn-dashed-active-color: @text-default-color;
+@btn-dashed-active-bg: @module-border-color;
+@btn-dashed-active-border: transparent;
+
+// link按钮
+@btn-link-color: @default-text-color;
+@btn-link-bg: transparent;
+@btn-link-hover-color: @bg-hover-color;
+@btn-link-active-color: @bg-active-color;
+
+// 主按钮-警告按钮
+@btn-primary-danger-color: @selected-color;
+@btn-primary-danger-bg: @status-error-color;
+@btn-primary-danger-hover-bg: #ff2843;
+@btn-primary-danger-active-bg: #c30019;
+
+// 普通按钮-警告按钮
+@btn-danger-color: @status-error-color;
+@btn-danger-bg: #fceaec;
+@btn-danger-border: @status-error-bg-color;
+@btn-danger-hover-bg: #ffcdd3;
+@btn-danger-hover-border: #e62743;
+@btn-danger-active-bg: #ffaab4;
+@btn-danger-active-border: @btn-danger-hover-border;
+
+// 不可用按钮
+@btn-disable-color: @disabled-color;
+@btn-disable-bg: @disabled-bg;
+@btn-disable-border: @disabled-border;
+
+@btn-margin-right: @space-distance;
+@btn-space-icon: @space-sub;
+
+/***************************************/
+
+/*单选按钮相关*/
+@radio-text-color: @text-default-color;
+@radio-size: 16px;
+@radio-dot-color: @default-text-hover-color;
+@radio-default-bg: @bg-color-base;
+@radio-default-border: 1px solid @gray-d8;
+@radio-hover-bg: @bg-hover-color-base;
+@radio-hover-border: @border-color-base;
+@radio-active: @white;
+@radio-active-bg:@border-color-base;
+@radio-active-border: @border-color-base;
+@radio-disable-bg: @disabled-bg;
+@radio-disable-border: @disabled-border;
+@radio-disable-dot-color: @disabled-color;
+@radio-disable-color: @disabled-color;
+@radio-button-color: @text-default-color;
+@radio-button-bg: @bg-color-base;
+@radio-button-border: 1px solid @module-border-color;
+@radio-button-card-border-bg: @btn-default-border; // 卡片式单选的边框after
+@radio-button-hover: @text-default-color;
+@radio-button-hover-bg: @bg-item-hover-color;
+@radio-button-active-bg: @module-border-color;
+@radio-button-hover-border: @btn-default-hover-border;
+@radio-button-checked: @selected-color;
+@radio-button-checked-bg: @lump-bg-color;
+@radio-button-disable-color: @disabled-color;
+@radio-button-disable-bg: @disabled-bg;
+@radio-button-disable-border: 1px solid @disabled-border;
+
+@radio-height: @height-main;
+@radio-padding: 0 @space-module;
+@radio-sm-padding: 0 @space-sub;
+/***************************************/
+
+/*dropdown下拉*/
+@dropdown-menu-item-color: @text-default-color;
+@dropdown-menu-bg: @bg-color-base;
+@dropdown-menu-item-hover-bg: @lump-bg-color;
+@dropdown-menu-item-hover-color: @white;
+
+@dropdown-menu-border: 1px solid rgba(@black,.1);
+
+@dropdown-menu-border-radius: @border-radius-base;
+@dropdown-menu-padding: 0;
+/***************************************/
+
+/*输入框，搜索框相关*/
+@input-color: @text-default-color;
+@input-placeholder-color: @placeholder-color;
+@input-border-color: @disabled-border;
+@input-bg: @bg-color-base;
+@input-hover-border-color: @border-hover-color-base;
+@input-hover-bg-color: @bg-color-base;
+@input-focus-border-color: @border-active-color-base;
+@input-focus-bg-color: @bg-color-base;
+@input-disabled: @disabled-color;
+@input-disabled-placeholder-color: @disabled-color;
+@input-disabled-border: @disabled-border;
+@input-disabled-bg: @disabled-bg;
+@input-clear-icon: @hint-text-color;
+@input-clear-icon-hover: @bg-hover-color;
+@input-icon: @component-icon-color;
+@input-icon-hover: @component-icon-hover-color;
+
+@input-height: @height-main;
+@input-padding: 0 @space-distance;
+@input-padding-horizontal-base-right: @space-module;
+@input-padding-vertical-base: @space-sub;
+@input-padding-horizontal-sm: 0;
+@input-padding-vertical-sm: @space-sub;
+@input-suffix-right: @space-sub;
+
+// 小型搜索框
+@input-simple-bg: transparent;
+@input-simple-clear-icon: @icon-color;
+@input-simple-border: 1px solid @border-color-base;
+@input-simple-hover-color: @border-active-color-base;
+@input-simple-disabled-border: @disabled-border;
+
+@input-simple-padding: 0 @space-module;
+@input-simple-input-padding: @space-sub 0;
+@input-simple-margin-top: @space-sub;
+@input-simple-clear-icon-top: -@space-sub;
+
+// 搜索框前、后缀
+@input-addon: @text-default-color;
+@input-addon-bg: @bg-color-base;
+@input-addon-border: @module-border-color;
+
+/***************************************/
+
+/*滚动条颜色*/
+@scrollbar-thumb-color: @gray-d8;
+
+/*面包屑相关*/
+@breadcrumb-base-color: @bread-text-normal-color;
+@breadcrumb-separator-color: @bread-text-normal-color;
+@breadcrumb-last-item-color: @text-default-color;
+@breadcrumb-link-color: @bread-text-link-color;
+@breadcrumb-link-color-hover: @bg-hover-color;
+@breadcrumb-active-color: @bread-text-active-color;
+@breadcrumb-bar-bg-color: @bg-color-base;
+
+@breadcrumb-bar-height: @height-bread;
+@breadcrumb-bar-padding: 0 @space-container;
+@breadcrumb-icon-margin-right: @space-sub;
+/***************************************/
+
+/*复选框相关*/
+@checkbox-size: 16px;
+@checkbox-color: @text-default-color;
+@checkbox-icon-color: @selected-color;
+@checkbox-default-bg: @bg-color-base;
+@checkbox-default-border: 1px solid @gray-d8;
+@checkbox-hover-bg: @bg-hover-color-base;
+@checkbox-hover-border: 1px solid @border-hover-color-base;
+@checkbox-checked-border: transparent;
+@checkbox-checked-bg: @lump-bg-color;
+@checkbox-disable-bg: @disabled-bg;
+@checkbox-disable-border: 1px solid @disabled-border;
+@checkbox-disable-color: @disabled-color;
+/***************************************/
+
+/*开关相关*/
+@switch-disabled-opacity: 1;
+
+@switch-default-bg: @bg-color-base;
+@switch-default-border: @border-color;
+@switch-default-color: @default-text-color;
+@switch-default-after-bg: @default-text-color;
+
+@switch-checked-bg-color: @lump-bg-color;
+@switch-checked-border: @border-color-base;
+@switch-checked-color: @white;
+@switch-checked-after-checked-bg: @white;
+
+@switch-disabled-bg: @disabled-bg;
+@switch-disabled-border: @disabled-border;
+@switch-disabled-color: @disabled-color;
+@switch-disabled-after-bg: @disabled-color;
+/***************************************/
+
+/* empty 空状态先关 */
+@empty-description-color: @hint-text-color;
+/***************************************/
+
+/*下拉列表框相关*/
+@select-text-color: @selected-color;
+@select-clear-hover-color: @icon-color-hover;
+@select-border-color: @disabled-border;
+@select-color: @text-default-color;
+@select-bg-color: @bg-color-base;
+@select-hover-border-color: @border-hover-color-base;
+@select-arrow-color: @icon-color-hover;
+@select-arrow-hover-color: @component-icon-hover-color;
+@select-disabled-color: @disabled-color;
+@select-disabled-bg-color: @disabled-bg;
+@select-disabled-border-color: @disabled-border;
+@select-multiple-item-color: @text-default-color;
+@select-multiple-item-border-color: @disabled-border;
+@select-multiple-item-bg-color: @bg-color-base;
+@select-multiple-item-hover-color: @text-default-color;
+@select-multiple-item-hover-border-color: @disabled-border;
+@select-multiple-item-hover-bg-color: @gray-f7;
+@select-menu-color: @text-default-color;
+@select-menu-bg: @bg-color-base;
+@select-menu-border: @border-color;
+@select-menu-item-color: @text-default-color;
+@select-menu-item-hover-bg: @bg-item-hover-color;
+@select-menu-item-active-bg: @bg-color-base;
+@select-menu-item-select-bg: @lump-bg-color;
+
+@select-selection-margin: 0 @space-sub 0 @space-distance;
+@select-arrow-right: @space-sub;
+
+@cascader-icon-color: #557CAF;
+/***************************************/
+
+/*树相关*/
+@tree-text-color: @text-default-color;
+@tree-item-hover-bg-color: @bg-item-hover-color;
+@tree-text-active-color: @selected-color;
+@tree-item-active-bg-color: @lump-bg-color;
+@tree-checkbox-default-bg: @bg-color-base;
+@tree-checkbox-default-border: 1px solid @disabled-border;
+@tree-checkbox-hover-bg: @lump-bg-color;
+@tree-checkbox-hover-border: 1px solid @border-hover-color-base;
+@tree-checkbox-checked-bg: @lump-bg-color;
+@tree-checkbox-disable-bg: @disabled-bg;
+@tree-checkbox-disable-border: 1px solid @disabled-border;
+
+@tree-node-item-height: @height-main;
+@tree-node-item-border: @disabled-border;
+@tree-node-icon-color: @gray-99;
+@tree-checkbox-padding: @space-sub 0;
+/***************************************/
+
+/*tree select 相关*/
+@treeselect-text-color: @text-default-color;
+@treeselect-bg-color: @bg-color-base;
+@treeselect-border: 1px solid @border-menu-color;
+@treeselect-checkbox-default-bg: @bg-color-base;
+@treeselect-checkbox-default-border: 1px solid @disabled-border;
+@treeselect-checkbox-hover-bg: @bg-hover-color-base;
+@treeselect-checkbox-hover-border: 1px solid @border-hover-color-base;
+@treeselect-checkbox-checked-bg: @lump-bg-color;
+@treeselect-checkbox-disable-bg: @disabled-bg;
+@treeselect-checkbox-disable-border: 1px solid @disabled-border;
+@treeselect-item-hover-bg-color: @bg-item-hover-color;
+@treeselect-item-active-bg-color: @lump-bg-color;
+@treeselect-search-clear-icon: @icon-color;
+@treeselect-search-border: 1px solid @border-color-base;
+@treeselect-search-hover-color: @border-active-color-base;
+@treeselect-search-disabled-border: @disabled-border;
+@treeselect-icon-color: @gray-99;
+@treeselect-selected-color: @selected-color;
+
+@treeselect-node-content-padding: 0 8px;
+@treeselect-node-content-line-height: @height-main;
+@treeselect-node-item-height: @height-main;
+@treeselect-node-hover-bg-color: @bg-item-hover-color;
+@treeselect-list-sub-padding-right: @space-distance;
+@treeselect-dropdown-search-padding: 0 @space-module;
+@treeselect-search-field-margin: @space-sub 0;
+@treeselect-search-field-padding: 0 @space-sub 0 0;
+@treeselect-search-field-line-height: @height-main;
+@treeselect-padding: 0 0 0 @space-distance;
+/***************************************/
+
+/*tabs 相关*/
+@tabs-bar-bg-color: @bg-color-base;
+@tabs-bar-border: 1px solid @gray-e2;
+@tabs-card-color: @text-default-color;
+@tabs-card-head-background: @bg-color-base;
+@tabs-card-head-border: @disabled-border;
+@tabs-card-active-color: @selected-color;
+@tabs-card-active-bg-color: @lump-bg-color;
+@tabs-card-active-hover-bg-color: @bg-hover-color;
+@tabs-card-hover-color: @text-default-color;
+@tabs-card-hover-border-color: @disabled-border;
+@tabs-card-hover-bg-color: @bg-item-hover-color;
+@tabs-card-click-color: @text-default-color;
+@tabs-card-click-bg-color: #0D75ED;
+@tabs-card-click-border-color: @disabled-border;
+@tabs-card-disable-color: @disabled-color;
+@tabs-card-disable-bg-color: @disabled-bg;
+@tabs-card-disable-border-color: @disabled-border;
+
+@tabs-color: @text-default-color;
+@tabs-active-color: @default-text-color;
+@tabs-hover-color: @bg-hover-color;
+@tabs-click-color: @bg-active-color;
+@tabs-disabled-color: @disabled-color;
+@tabs-highlight-color: @selected-color;
+@tabs-ink-bar-color: @default-text-color;
+@tabs-title-font-size: @title-font-size;
+@tabs-content-bg: @bg-color-base;
+@tabs-content-border: 1px solid @gray-e2;
+@tabs-box-shadow: @module-box-shadow;
+
+@tabs-content-padding: @space-container;
+@tabs-bar-height: @height-header;
+@tabs-bar-padding: 0 @space-container;
+@tabs-card-bar-padding: @space-sub @space-container 0;
+@tabs-tab-padding: @space-distance 0;
+@tabs-border-radius: @border-radius-base @border-radius-base 0 0;
+@tabs-content-border-radius: 0 0 @border-radius-base @border-radius-base;
+@tabs-tabpane-margin-left: 48px;
+@tabs-content-height: calc(100% - @height-header);
+/***************************************/
+
+/*表格相关*/
+@table-header-color: @gray-99;
+@table-header-bg: #E5EFFF;
+@table-border: 1px solid @gray-d8;
+@table-icon-color: @gray-99;
+@table-icon-hover-color: @bg-hover-color;
+@table-color: @text-default-color;
+@table-tr-odd-bg-color: @white;
+// @table-tr-even-bg-color: @white;
+@table-tr-even-bg-color: @gray-f8;
+@table-tr-active-bg-color: @bg-color;
+@table-placeholder-bg-color: #f2f2f2;
+@table-filter-bg: @white;
+@table-filter-arrow-before-bg: @white;
+@table-filter-arrow-after-bg: @white;
+
+
+@table-td-padding: 0 @space-distance;
+@table-td-first-padding-left: 24px;
+@table-fixed-td-first-padding-left: 12px;
+@table-td-last-padding-right: @space-container;
+@table-tr-height: @height-sub;
+@table-th-filter-padding: @space-distance;
+@table-icon-margin-left: @space-sub;
+@table-scroll-border-radius: @border-radius-sub;
+@table-padding-vertical: @space-distance;
+@table-padding-horizontal: 10px;
+@table-header-padding-right: @space-sub;
+@table-header-border-radius: @border-radius-sub @border-radius-sub 0 0;
+@table-border-radius: 4px;
+@table-body-margin-top: @space-sub;
+@table-pagination-margin: @space-container 0;
+@table-filter-padding: 12px;
+@table-filter-button-margin: 0 0 0 @space-container;
+@table-pagination-margin: @space-container 0;
+@table-filter-shadow: 0px -3px 12px 0px rgba(#bbb,0.5);
+/***************************************/
+
+/*分页组件相关*/
+// @pagination-item-bg-active: @title-color;
+
+@page-item-color: @text-default-color;
+@page-item-bg: @bg-color-base;
+@page-item-border: @disabled-border;
+
+@page-item-hover-color: @default-text-color;
+@page-item-hover-bg: @bg-color;
+@page-item-hover-border: @border-menu-color;
+
+@page-item-active-color: @selected-color;
+@page-item-active-bg: @lump-bg-color;
+@page-item-active-border: @border-color;
+
+@page-item-disable-color: @disabled-color;
+@page-item-disable-bg: @disabled-bg;
+@page-item-disable-border: @disabled-border;
+
+@page-prev-next-color: @default-text-color;
+@page-prev-next-bg: @bg-color-base;
+@page-prev-next-border: 1px solid @border-color;
+
+@page-prev-next-hover-color: @default-text-hover-color;
+@page-prev-next-hover-bg: @bg-hover-color;
+@page-prev-next-hover-border: @border-hover-color;
+
+@page-prev-next-click-color: @selected-color;
+@page-prev-next-click-bg: #0D75ED;
+@page-prev-next-click-border: transparent;
+
+@page-prev-next-disable-color: @disabled-color;
+@page-prev-next-disable-bg: @disabled-bg;
+@page-prev-next-disable-border: @disabled-border;
+
+@page-item-ellipsis-color: @component-icon-color;
+@page-item-link-icon-color: @icon-color;
+
+@page-total-color: @default-text-color;
+@page-options-size-changer-select-bg: @bg-color-base;
+@page-options-size-changer-select-border: @border-color;
+@page-options-size-changer-select-color: @default-text-color;
+@page-options-size-changer-hover-select-bg: @bg-hover-color;
+@page-options-size-changer-hover-select-border: @border-hover-color;
+@page-options-size-changer-hover-select-color: @default-text-hover-color;
+@page-options-size-changer-active-select-bg: @bg-active-color;
+@page-options-size-changer-active-select-border: @border-active-color;
+@page-options-size-changer-active-select-color: @default-text-click-color;
+@page-quick-jumper-color: @text-default-color;
+@page-quick-jumper-bg: @bg-color-base;
+@page-quick-jumper-border: @disabled-border;
+@page-quick-jumper-hover-border: @border-color;
+@page-quick-jumper-hover-bg: @bg-color;
+@page-quick-jumper-focus-border: @border-color;
+
+@pagination-item-margin-right: @space-sub;
+@pagination-options-margin-right: @space-module;
+@page-simple-input-width: 48px;
+@page-item-space: 0 @space-module 0 8px;
+/***************************************/
+
+/* progress 进度条相关 */
+@progress-default-bg: @lump-bg-color;
+@progress-error-color: @status-error-bg-color;
+@progress-success-color: @status-other-finish;
+@progress-text-color: @default-text-color;
+@progress-bg-color: @disabled-border;
+
+/***************************************/
+
+/*steps 相关*/
+@step-item-finish-bg: @bg-color-base;
+@step-item-finish-border: @status-other-finish;
+@step-item-finish-icon-color: @status-other-finish;
+@step-item-finish-color: @status-other-finish;
+@step-item-finish-after-color: @default-text-color;
+@step-item-finish-description-color: @hint-text-color;
+
+@step-item-process-bg: @lump-bg-color;
+@step-item-process-border: @lump-bg-color;
+@step-item-process-icon-color: @white;
+@step-item-process-color: @default-text-color;
+@step-item-process-after-color: @disabled-border;
+@step-item-process-description-color: @hint-text-color;
+
+@step-item-wait-bg: @disabled-bg;
+@step-item-wait-border: @disabled-border;
+@step-item-wait-icon-color: @disabled-color;
+@step-item-wait-color: @placeholder-color;
+@step-item-wait-after-color: @module-border-color;
+@step-item-wait-description-color: @hint-text-color;
+
+@step-vertical-item-finish-bg: @status-other-finish;
+@step-vertical-item-finish-border: @status-other-finish;
+@step-vertical-item-finish-icon-color: @white;
+@step-vertical-item-finish-color: @status-other-finish;
+@step-vertical-item-finish-after-color: @disabled-border;
+@step-vertical-item-finish-description-color: @hint-text-color;
+
+@step-vertical-item-process-bg: @status-other-wait;
+@step-vertical-item-process-border: @status-other-wait;
+@step-vertical-item-process-icon-color: @white;
+@step-vertical-item-process-color: @status-other-wait;
+@step-vertical-item-process-after-color: @disabled-border;
+@step-vertical-item-process-description-color: @hint-text-color;
+
+@step-vertical-item-error-bg: @status-error-color;
+@step-vertical-item-error-border: @status-error-border-color;
+@step-vertical-item-error-icon-color: @white;
+@step-vertical-item-error-color: @status-error-color;
+@step-vertical-item-error-after-color: @disabled-border;
+@step-vertical-item-error-description-color: @hint-text-color;
+
+@step-vertical-item-wait-bg: @lump-bg-color;
+@step-vertical-item-wait-border: @lump-bg-color;
+@step-vertical-item-wait-icon-color: @white;
+@step-vertical-item-wait-color: @default-text-color;
+@step-vertical-item-wait-after-color: @disabled-border;
+@step-vertical-item-wait-description-color: @hint-text-color;
+@step-tail-padding: 48px 0 16px;
+@step-sm-tail-padding: 40px 0 16px;
+/***************************************/
+
+/*弹窗相关*/
+@modal-header-bg: @bg-color-base;
+@modal-header-border: 1px solid @gray-e2;
+@modal-header-title-color: @text-default-color;
+@modal-header-close-icon-color: @icon-color-close;
+@modal-body-color: @text-default-color;
+@modal-body-bg: @bg-color-base;
+@modal-body-border: @disabled-border;
+@modal-footer-bg: @bg-color-base;
+@modal-footer-border: 1px solid @disabled-border;
+
+@modal-header-border-radius: @border-radius-sub @border-radius-sub 0 0;
+@modal-footer-border-radius: 0 0 @border-radius-sub @border-radius-sub;
+@modal-max-height: 600px;
+/***************************************/
+
+/*全局消息相关*/
+@message-text-color: @text-default-color;
+
+@message-success-color: @status-other-finish;
+@message-success-bg-color: #f1fae8;
+@message-success-border: 1px solid @status-other-finish;
+
+@message-error-color: @status-error-bg-color;
+@message-error-bg-color: @status-danger-bg-color;
+@message-error-border: 1px solid @status-error-bg-color;
+
+@message-warning-color: @status-other-wait;
+@message-warning-bg-color: #fff8e5;
+@message-warning-border: 1px solid @status-other-wait;
+
+@message-info-color: @status-processing-color;
+@message-info-bg-color: @bg-color;
+@message-info-border: 1px solid @status-processing-border-color;
+
+@message-content-padding: @space-sub @space-module;
+@message-content-border-radius: @border-radius-sub;
+@message-icon-margin-right: @space-distance;
+/***************************************/
+
+/*全局通知相关*/
+@notification-success-color: @status-other-finish;
+@notification-success-bg-color: #f1fae8;
+@notification-success-border: 1px solid @status-other-finish;
+
+@notification-error-color: @status-error-bg-color;
+@notification-error-bg-color: @status-danger-bg-color;
+@notification-error-border: 1px solid @status-error-bg-color;
+
+@notification-warning-color: @status-other-wait;
+@notification-warning-bg-color: #fff8e5;
+@notification-warning-border: 1px solid @status-other-wait;
+
+@notification-info-color: @status-processing-color;
+@notification-info-bg-color: @bg-color;
+@notification-info-border: 1px solid @status-processing-border-color;
+
+@notification-icon-close-color: @hint-text-color;
+@notification-action-btn-color: @default-text-color;
+
+@notification-info-text-color: @text-default-color;
+
+@notification-content-height: @height-sub;
+@notification-content-padding: 16px;
+@notification-info-margin-left: 40px;
+
+/***************************************/
+
+/*气泡相关*/
+@tooltip-bg: rgba(@black,0.7);
+@tooltip-color: @white;
+@tooltip-arrow-width: 6px;
+@tooltip-arrow-color: @hint-bg-color;
+@tooltip-border: 1px solid rgba(@black,0.7);
+
+@tooltip-border-radius: @border-radius-base;
+@tooltip-shadow: 1px 1px 4px 0px rgba(#bbb,0.5);
+/***************************************/
+
+/*提示卡片相关*/
+@popover-bg: @bg-color-base;
+@popover-title-bg:@bg-color-base;
+@popover-title-border: @gray-e2;
+@popover-top-arrow-bg: @bg-color-base;
+@popover-color: @text-default-color;
+@popover-arrow-width: 6px;
+@popover-arrow-color: @bg-color-base;
+@popover-border: 1px solid @disabled-border;
+@popover-border-radius: @border-radius-base @border-radius-base 0 0;
+@popover-shadow: 0px -3px 12px 0px rgba(#bbb,0.5);
+/***************************************/
+
+/*日期相关*/
+@calendar-btn-color: @hint-text-color;
+@calendar-text-color: @text-default-color;
+@calendar-icon-color: @component-icon-color;
+@calendar-icon-hover-color: @component-icon-hover-color;
+@calendar-hover-icon-color: @bg-hover-color;
+@calendar-item-hover-bg: @bg-hover-color-base;
+@calendar-item-selected-color: @lump-bg-color;
+//@calendar-range-cell-color: @status-processing-bg-color;
+@calendar-module-border: 1px solid @module-border-color;
+@calendar-scroll-bg-color: #396399;
+@calendar-bg-color: @bg-color-base;
+@calendar-separator-color: @placeholder-color;
+@calendar-border-color: @disabled-border;
+@calendar-current-border: 1px solid @border-menu-color;
+@calendar-current-bg: @bg-color;
+@calendar-current-color: @default-text-color;
+@calendar-header-color: @default-text-color;
+@calendar-submit-btn-bg: @lump-bg-color;
+@calendar-disbled-color: @disabled-color;
+@calendar-hover-border-color: @border-hover-color-base;
+@calendar-selected-color: @selected-color;
+
+@calendar-input-padding: 0 22px 0 @space-distance;
+@calendar-input-line-height: @height-main;
+@calendar-input-padding: 0 @space-distance;
+@calendar-icon-right: @space-sub;
+@calendar-btn-height: @height-item;
+/***************************************/
+
+/*tag相关*/
+@tag-text-color: @text-default-color;
+@tag-default-color: @gray-99;
+@tag-hover-color: @default-text-hover-color;
+@tag-click-color: @default-text-click-color;
+@tag-default-bg: @bg-color-base;
+@tag-bg-hover-color: @bg-item-hover-color;
+@tag-bg-click-color: @gray-d8;
+@tag-font-size: @small-font-size;
+@tag-border-color: @module-border-color;
+@tag-border-hover-color: @border-hover-color;
+@tag-border-click-color: @gray-d8;
+
+@tag-item-height: @space-container;
+@tag-item-padding: 0 @space-sub;
+/***************************************/
+
+/*抽屉相关*/
+@ant-collapse-border-color: @disabled-border;
+@ant-collapse-arrow-color: @gray-99;
+/***************************************/
+
+/*折叠版相关*/
+@collapse-header-bg: @title-color;
+/***************************************/
+
+/*menu相关*/
+@menu-bg-color: @menu-bar-bg-color;
+@menu-box-shadow-color: @menu-bar-box-shadow;
+@menu-item-color: @menu-bar-item-color;
+@menu-item-hover-color: @menu-bar-item-hover-color;
+@menu-item-hover-bg-color: @menu-bar-item-hover-bg-color;
+@menu-item-active-color: @menu-bar-item-active-color;
+@menu-item-active-bg: @menu-bar-first-level-active-bg-color;
+/***************************************/
+
+/*卡片相关*/
+@card-text-color: @gray-66;
+@card-header-bg: @bg-color-base;
+@card-border-color: @module-border-color;
+@card-hover-border-color: @border-hover-color;
+@card-hover-shadow: 0px 5px 20px 0px #B9B9B9;
+@card-hover-header-bg-color: #054577;
+@card-border: 1px solid @gray-e2;
+@card-title-color: @default-text-color;
+@card-body-bg: @bg-color-base;
+@card-actions-bg: @bg-color-base;
+@card-actions-border: @module-title-border-color;
+@card-actions-item-color: @default-text-color;
+@card-actions-item-hover-bg-color: @bg-item-hover-color;
+@card-actions-item-disabled-color: @disabled-color;
+
+@card-header-height: @height-sub;
+@card-header-padding: 0 @space-container;
+@card-actions-action-item-line-height: calc(@height-main - 2px);
+/***************************************/
+
+/*表单相关*/
+@form-required-color: #e60a26;
+@form-error-color: @status-error-color;
+@form-error-border-color: @status-error-bg-color;
+@form-error-bg-color: @status-danger-bg-color;
+@form-warning-color: @status-other-wait;
+@form-warning-border-color: @status-other-wait;
+@form-warning-bg-color: @status-wait-bg-color;
+@form-success-color: @status-other-finish;
+@form-label-color: @hint-text-color;
+
+@form-item-line-height: @height-main;
+@form-select-icon-right: @space-sub;
+@form-split-margin: @space-sub 0 @space-container;
+/***************************************/
+
+/*时间选择器相关*/
+@time-picker-text-color: @text-default-color;
+@time-picker-selected-text-color: @selected-color;
+@time-picker-selected-bg: @lump-bg-color;
+@time-picker-icon-color: @component-icon-color;
+@time-picker-icon-hover-color: @icon-color;
+@time-picker-input-focus-border-color: @border-active-color-base;
+@time-picker-input-focus-border: 1px solid @time-picker-input-focus-border-color;
+@time-picker-input-focus-bg: @bg-color-base;
+@time-picker-box-border-color: @module-border-color;
+@time-picker-box-border: 1px solid @time-picker-box-border-color;
+@time-picker-box-bg: @bg-color-base;
+@time-picker-item-hover-bg: @bg-color;
+@time-picker-item-active-bg: @lump-bg-color;
+@time-picker-disabled: @disabled-color;
+@time-picker-disabled-border: @disabled-border;
+@time-picker-disabled-bg: @disabled-bg;
+@time-picker-scroll-bg: @gray-d8;
+
+@time-picker-panel-column-width: 60px;
+
+@time-picker-input-padding: 0 @space-distance;
+@time-picker-icon-right: @space-sub;
+@time-picker-input-wrap-line-height: calc(@height-main - 2px);
+@time-picker-input-wrap-border-radius: @border-radius-base;
+@time-picker-panel-item-height: @height-item;
+/***************************************/
+
+/*抽屉相关*/
+@drawer-text-color: @hint-text-color;
+@drawer-header-color: @text-default-color;
+@drawer-border: 1px solid @gray-e2;
+@drawer-bg: @bg-color-base;
+@drawer-title-bg: @bg-color-base;
+@drawer-title-border: @gray-e2;
+@drawer-title-icon-color: @icon-color-close;
+
+@drawer-border-radius: @border-radius-base;
+@drawer-header-height: @height-header;
+@drawer-header-padding: 0 @space-container;
+@drawer-close-icon-right: @space-container;
+@drawer-width: 352px;
+/***************************************/
+
+/*上传相关*/
+@upload-bg: @bg-color;
+@upload-hover-bg: @bg-hover-color;
+@upload-border: 1px solid @border-color;
+@upload-hover-border-color: @border-hover-color;
+@upload-text-color: @default-text-color;
+@upload-text-hover-color: @default-text-hover-color;
+@upload-text-description-color: @hint-text-color;
+@upload-drag-bg: @gray-f8;
+@upload-drag-border: 1px solid @module-border-color;
+@upload-list-item-hover-bg: @bg-item-hover-color;
+@upload-item-icon-color: @selected-color;
+@upload-item-icon-close-color: @default-text-color;
+@upload-item-hover-icon-color: @icon-color-hover;
+@upload-item-hover-bg-color: rgba(@bg-color, .5);
+@upload-item-name-color: @text-default-color;
+@upload-list-icon: @icon-color-hover;
+
+@upload-item-padding: 0 @space-sub;
+@upload-card-item-padding: @space-distance;
+@upload-card-item-margin: 0 @space-container @space-container 0;
+@upload-item-clear-icon-right: @space-sub;
+@upload-text-icon-space: @space-distance;
+@upload-border-radius: @border-radius-base;
+/***************************************/
+/*列表相关*/
+@list-item-title-color: @hint-text-color;
+@list-item-text-color: @text-default-color;
+
+@list-item-title-margin-right: @space-distance;
+@list-item-line-height: 1;
+@list-item-margin-top: @space-module;
+/***************************************/
+/*折叠面板*/
+@collapse-icon-color: @gray-99;
+@collapse-header-hover-bg: @bg-item-hover-color;
+@collapse-header-active-color: @selected-color;
+@collapse-header-active-bg: @lump-bg-color;
+@collapse-disabled-color: @disabled-color;
+@collapse-disabled-bg: @disabled-bg;
+
+@collapse-item-border: 1px solid @module-border-color;
+@collapse-border-radius: 2px;
+/***************************************/

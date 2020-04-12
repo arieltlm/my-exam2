@@ -1,0 +1,89 @@
+$stage-space:60px;
+$stage-space-half:$stage-space / 2;
+$job-height:36px;
+$vertical-space:10px;
+$vertical-horizontal-space:8px;
+$border:1px solid #d8d8d8;
+$border-line:2px solid #d8d8d8;
+
+:global {
+    .job {
+        display: flex;
+        position: relative;
+        margin-bottom: 10px;
+        border: $border;
+        border-radius: 10px;
+        width: 100%;
+        height: $job-height;
+        padding: 0 15px;
+        line-height: $job-height;
+
+
+        .status {
+            margin-right: 10px;
+
+            .icon-success {
+                color: #65dc6f;
+            }
+
+            .icon-fail {
+                color: #9e9e9e;
+            }
+        }
+
+        .time {
+            margin-left: auto;
+        }
+
+        &::before,
+        &::after {
+            display: inline-block;
+            position: absolute;
+            top: - $job-height/ 2 - $vertical-space - 10;
+            border-bottom: $border-line;
+            width: $stage-space-half - $vertical-horizontal-space;
+            height: $vertical-space + $job-height + 10;
+            content: "";
+        }
+
+        &::before {
+            left: -$stage-space-half + $vertical-horizontal-space;
+            border-left: $border-line;
+            border-radius: 0 0 0 15px;
+        }
+
+        &::after {
+            right: -$stage-space-half + $vertical-horizontal-space;
+            border-right: $border-line;
+            border-radius: 0 0 15px 0;
+        }
+
+        // &.job0 {
+        &:nth-child(2) {
+            &::before {
+                top: $job-height/ 2;
+                left: -$stage-space-half - 1;
+                border: none;
+                border-top: $border-line;
+                width: $stage-space-half;
+            }
+
+            &::after {
+                top: $job-height/ 2;
+                right: -$stage-space-half - 1;
+                border: none;
+                border-top: $border-line;
+                width: $stage-space-half;
+            }
+        }
+
+        // &.job1 {
+        &:nth-child(3) {
+            &::before,
+            &::after {
+                top: - $job-height / 2 - $vertical-space;
+                height: $vertical-space + $job-height;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.main-view {
+    @include size(100%, calc(100% - #{$height-nav}));
+    display: flex;
+    background: $datasource-manage-bg;
+    padding: $space-lg;
+
+    :global {
+        .left {
+            @include size(50%, 100%);
+            padding: 10px;
+        }
+
+        .right {
+            @include size(50%, 100%);
+        }
+    }
+}

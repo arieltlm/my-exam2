@@ -1,0 +1,57 @@
+@mixin size($width:100%,$height:auto) {
+  width: $width;
+  height: $height;
+}
+
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin headerIco($end) {
+  @for $i from 1 through $end {
+    > li:nth-child(#{$i}) {
+      a:hover, a.active {
+        i {
+          @extend .icons-icon00#{$i}.icon00#{$i}-hover;
+        }
+      }
+    }
+  }
+}
+
+@mixin text-emphasis-variant($parent, $color) {
+  #{$parent} {
+    color: $color;
+  }
+  a#{$parent}:hover,
+  a#{$parent}:focus {
+    color: darken($color, 10%);
+  }
+}
+
+@mixin list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+@mixin fieldset{
+  fieldset{
+    border: 1px solid $gray-dd;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+
+    legend{
+      font-size: 14px;
+      width: auto;
+      margin: 0 10px;
+      border-width: 0;
+    }
+
+    &+fieldset{
+      margin-top: 10px;
+    }
+  }
+}

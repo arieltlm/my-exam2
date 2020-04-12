@@ -1,0 +1,13 @@
+.footer-button-common {
+    text-align: right;
+
+    :global {
+        .ant-btn {
+            margin-right: $space-md;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

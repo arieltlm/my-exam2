@@ -1,0 +1,54 @@
+.tablebox-public-common {
+    position: relative;
+    height: 100%;
+
+    :global {
+        .ant-table-wrapper {
+            .ant-table {
+                table {
+                    table-layout: fixed;
+
+                    th,
+                    td {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+
+        // .ant-table-scroll table .ant-table-fixed-columns-in-body {
+        //     visibility: visible;
+        // }
+
+        // 固定列在右边
+        .ant-table-fixed-right {
+            height: calc(100% - 8px);
+        }
+
+        // 空表格
+        // .ant-table-empty {
+        //     .ant-table-content,
+        //     .ant-table-fixed-right,
+        //     .ant-table-fixed-left {
+        //         height: auto;
+        //     }
+
+        //     .ant-table-header {
+        //         margin-bottom: 0 !important;
+        //     }
+
+        //     .ant-table-fixed-right {
+        //         .ant-table-header {
+        //             height: 40px;
+        //         }
+        //     }
+
+        // 无数据时表头不出滚动条
+        // .ant-table-fixed {
+        //     width: 30px !important;
+        // }
+        // }
+    }
+}

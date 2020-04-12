@@ -1,0 +1,23 @@
+.right-top-info {
+    @include size(100%,88px);
+    margin-bottom: $space-md;
+    border-left: 2px solid $datasource-info-border-left-color;
+    box-shadow: 0 2px 8px 0 $datasource-info-boxshadow-color;
+    background: $datasource-manage-panel-bg;
+    padding: 13px 23px;
+
+    :global {
+        .ant-descriptions-item {
+            padding-bottom: 8px !important;
+            line-height: 28px;
+        }
+
+        .success {
+            color: $datasource-info-status-success;
+        }
+
+        .error {
+            color: $datasource-info-status-error;
+        }
+    }
+}

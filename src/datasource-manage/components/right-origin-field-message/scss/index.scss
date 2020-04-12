@@ -1,0 +1,29 @@
+.message-info {
+    :global {
+        .message-status {
+            padding-top: 15px;
+            font-size: 14px;
+            font-weight: 500;
+
+            i {
+                margin-right: 8px;
+                vertical-align: middle;
+                color: $status-wait-color;
+                font-size: 20px;
+            }
+        }
+
+
+        .ant-divider-horizontal {
+            position: relative;
+            left: -$space-lg;
+            margin: $space-lg 0 $space-md 0;
+            width: calc(100% + 2 * #{$space-lg});
+        }
+
+        .ant-btn {
+            float: right;
+            margin-right: 0;
+        }
+    }
+}

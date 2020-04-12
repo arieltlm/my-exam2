@@ -1,0 +1,60 @@
+.credit-datasoruce {
+    @include size(100%, 100%);
+
+    :global {
+        .main-content-modal {
+            max-height: 585px;
+            // max-height: calc(100% - 25px - 32px);
+            overflow-y: auto;
+        }
+
+        .test-link-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .ant-form {
+            width: 572px;
+
+            .ant-col-12 {
+                width: 240px;
+
+                &:last-child {
+                    float: right;
+                }
+            }
+        }
+
+        .ant-form-item-label {
+            line-height: 1;
+        }
+
+        .ant-input,
+        .ant-input-number,
+        .ant-input-password,
+        .ant-select {
+            width: 240px;
+        }
+
+        .long-item {
+            .ant-input,
+            .ant-input-number,
+            .ant-select {
+                // width: 549px;
+                width: 100%;
+            }
+        }
+
+
+
+        // .ant-input-password-icon {
+        //     margin-right: 10px;
+        // }
+
+        .ant-form-item {
+            margin-bottom: $space-md;
+        }
+    }
+}

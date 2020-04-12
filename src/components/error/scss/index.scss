@@ -1,0 +1,29 @@
+.main404 {
+    @include size(100%,100%);
+    position: relative;
+    background: url("../images/404.gif") center center no-repeat;
+    overflow: hidden;
+    text-align: center;
+
+    > div {
+        @include size(100px, 32px);
+        @include box-shadow(0 0 10px 3px $error-border-color);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 220px 0 0 330px;
+        border-radius: 16px;
+        background-color: $error-bg-color;
+        overflow: hidden;
+        text-align: center;
+        line-height: 32px;
+
+        > a {
+            color: $white;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

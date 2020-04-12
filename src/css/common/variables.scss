@@ -1,0 +1,291 @@
+$font-path: "fonts" !default;
+$font-family: "siyuan",
+"Microsoft YaHei",
+"SimSun",
+"Roboto-Regular",
+"Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif !important;
+
+/********************主题相关配色start**************************/
+/*颜色序列*/
+$white: #fff;
+$black: #000;
+
+$gray-11: #111111;
+$gray-66: #666666;
+$gray-99: #999999;
+$gray-d8: #d8d8d8;
+$gray-f9: #f9f9f9;
+$gray-e2: #e2e2e2;
+
+/*滚动条*/
+$scrollbar-thumb-color: $gray-d8;
+
+/*导航*/
+/*顶部导航*/
+$nav-header-bg-color: #2d2f34;
+/*侧边深色导航*/
+$nav-sider-bg-color: #3d3d43;
+/*侧边浅色导航*/
+$nav-sider-light-bg-color: $white;
+
+/*主题色*/
+$main-color: #4a62e7;
+$main-hover-color: #7087ff;
+
+/*文字相关*/
+$title-color: $gray-11; // 模块大标题 / 弹窗标题 / 特殊标题
+$stress-color: $gray-66; // 二级标题 / 强调文字
+$text-color: $gray-11; // 一般文字 / 表格文字 / form、list的值
+$content-color: $gray-66; // 大段正文文本 / form、list的label
+$placeholder-color: $gray-99; // 输入框内的提示文字、最次要的文字
+$subsidiary-color: $gray-66; // 图表xy标尺 / 相关辅助解释性文字 / 描述性文字
+$description-color: $gray-99; // 图表xy标尺 / 相关辅助解释性文字 / 描述性文字
+
+/*用于组件主要文字颜色*/
+$default-text-color: $text-color; // 默认颜色
+$default-text-hover-color: #4a62e7; // hover字体颜色
+$default-text-click-color: #4a62e7; // click字体颜色
+$default-text-active-color: $white; // 选中或不同状态中字体颜色，如主按钮、datepicker、成功、失败状态中的icon等
+
+/*部分组件内颜色，如link、upload等*/
+$text-component-color: #4a62e7;
+$text-component-hover-color: #7087ff;
+$text-component-active-color: #5f78ff;
+
+/*链接文字相关*/
+$link-color: $text-component-color;
+$link-hover-color: $text-component-hover-color;
+$link-active-color: $text-component-active-color;
+
+/*icon相关*/
+$icon-color: #4a62e7;
+$icon-hover-color: #5f78ff;
+$icon-active-color: #5f78ff;
+
+/*组件内的icon*/
+$icon-component-color: $gray-99; // select、menu等的展开收起图标
+$icon-component-hover-color: $icon-color;
+
+/*普通按钮、tab（card）、tag*/
+$border-component-color: #4a62e7;
+$border-component-hover-color: #7087ff;
+$border-component-active-color: #5f78ff;
+/*统一边框，以及选中状态的边框，如checkbox、input、select等*/
+$border-color-base: $gray-d8;
+$border-hover-color-base: #4a62e7;
+$border-active-color-base: #4a62e7;
+/*分割线*/
+$border-color-split: $gray-d8;
+
+/*投影悬浮类菜单、气泡等*/
+$box-shadow-base: 0px 2px 12px 0px transparent;
+
+/*背景色*/
+$bg-main-color: #f4f5f6; // 页面背景 / 树结构折叠面板背景
+$bg-sub-color: $gray-f9; // 表格深色行，次于#f4f5f6的背景，层级比较多的页面背景色，上传下载框背景
+
+/*统一背景色，组件背景色，如输入框等*/
+$bg-color: $white;
+$bg-hover-color: $white;
+$bg-active-color: $white;
+
+/*如主按钮等*/
+$bg-component-color: #4a62e7;
+$bg-component-hover-color: #7087ff;
+$bg-component-active-color: #5f78ff;
+
+/*下拉框、日历、时间选择器下拉菜单、/*下拉框、日历、时间选择器下拉菜单\主按钮、tabs页签的选中效果等*/
+$bg-item-hover-color: #eceffc;
+$bg-item-active-color: #4a62e7;
+
+/*投影颜色*/
+$box-shadow: 0px 4px 12px 0px rgba($black, .2);
+
+/*页面模块*/
+$body-bg-color: $bg-main-color; // 页面背景色
+$module-bg-color: $bg-color; // 模块背景色
+$module-border-color: $border-color-base; // 模块边框色
+$module-title-bg-color: $bg-color; // 模块标题背景色
+$module-title-border-color: $border-color-base; // 模块标题边框色
+
+/*状态配色，注意：状态颜色需统一*/
+/*用于错误警示等*/
+$status-error-color: #e73047; // 内容色
+$status-error-border-color: $status-error-color; // 边框色
+$status-error-bg-color: #fceaec; // 背景色
+
+/*用于等待/ 一般提示/等*/
+$status-wait-color: #ffbf00;
+$status-wait-border-color: $status-wait-color;
+$status-wait-bg-color: #fff8e5;
+
+/*成功状态*/
+$status-success-color: #7cd322;
+$status-success-border-color: $status-success-color;
+$status-success-bg-color: #f1fae8;
+
+/*运行状态/解释性说明*/
+$status-processing-color: #4a62e7;
+$status-processing-border-color: $status-processing-color;
+$status-processing-bg-color: #eceffc;
+
+/*停止状态*/
+$status-stop-color: #8939f1;
+$status-stop-border-color: $status-stop-color;
+$status-stop-bg-color: #f3ebfd;
+
+/*无效状态*/
+$status-invalid-color: #ccd2d8;
+$status-invalid-border-color: #ccd2d8;
+$status-invalid-bg-color: $bg-main-color;
+
+/*其他状态*/
+$status-other-color: #0078ff;
+$status-other-border-color: $status-other-color;
+$status-other-bg-color: #eaf3ff;
+$status-other-finish: #7cd322;
+$status-other-wait: #ffbf00;
+
+/*disable状态相关*/
+$disabled-color: #c0c5ca; // 文字色
+$disabled-bg: $bg-main-color; // 背景色
+$disabled-border: #ccd2d8; // 边框色
+
+// 一些其他颜色从主题中拿出来
+$btn-primary-danger-color: $default-text-active-color;
+$btn-primary-danger-bg: $status-error-color;
+$btn-primary-danger-hover-bg: #ec4143;
+$btn-primary-danger-active-bg: $status-error-bg-color;
+
+// 普通按钮-警告按钮
+$btn-danger-color: #e70a26;
+$btn-danger-bg: $bg-color;
+$btn-danger-border: #e73047;
+$btn-danger-hover-color: $default-text-active-color;
+$btn-danger-hover-bg: #ec4143;
+$btn-danger-hover-border: $btn-danger-hover-bg;
+$btn-danger-active-color: $default-text-active-color;
+$btn-danger-active-bg: #e73047;
+$btn-danger-active-border: $btn-danger-active-bg;
+
+$menu-bar-item-color: $white;
+$menu-bg-color: #0d0f14;
+$menu-item-color: rgba($menu-bar-item-color, .7);
+$menu-item-hover-color: rgba($menu-bar-item-color, .84);
+$menu-item-hover-bg: #eceffc;
+$menu-item-active-color: $default-text-active-color !important;
+$menu-item-active-bg: $bg-component-color;
+$menu-item-group-title-color: $description-color;
+$menu-item-disabled-color: rgba($disabled-color, .5);
+
+$menu-submenu-item-color: #1d1f24;
+$menu-submenu-item-hover-color: #1d1f24;
+$menu-submenu-item-active-color: $text-component-color;
+$menu-horizontal-item-hover-bg: #282c36;
+$menu-vertical-item-hover-bg: #eceffc;
+$menu-collapsed-item-active-bg: $bg-component-color;
+$menu-collapsed-popup-bg: #272a33;
+
+$table-header-color: $stress-color;
+$table-header-bg: #dfe4fa;
+$table-tr-active-bg-color: #eceffc;
+$table-row-hover-bg: #eceffc;
+$table-tr-odd-bg-color: $white;
+$table-tr-even-bg-color: $bg-sub-color;
+
+/*间距*/
+$space-lg: 24px; // 页面内间距、内容内边距、模块间间距
+$space-md: 16px; // 按钮的左右内间距、内容间的间距、内嵌型页面内边距，如输入框横向之间的间距、tab内容区内的模块中嵌入的内容
+$space-sm: 12px; // 输入框等内容的内间距，模块中底部操作按钮的上下间距等
+$space-xs: 8px; // icon与内容之间的距离、icon与输入框等边框之间的距离、表单中说明文字与输入框的距离
+$space-xxs: 4px; // 小号卡片式tabs
+$space-tab: 36px; // 非卡片式tab的间距
+
+/*高度*/
+$height-nav: 64px; // 横向导航及缩小后左侧导航的高度
+$height-xl: 48px; // tab页签高度、部分模块header的高度等
+$height-lg: 40px; // table的行高、message的高度等
+$height-md: 36px; // 小号tabs页签高度等
+$height-sm: 32px; // 输入框、menu等高度
+$height-xs: 24px; // 主要针对timepicker的选项高度等 
+/**************************主题相关配色end***********************************/
+/***********************components中的组件start*****************************/
+// public
+$public-selection-bg-color:$default-text-color;
+$public-loading-div-bg-color:rgba($black, 0.2);
+$public-loading-color:$main-color;
+$public-mark-bg-color: $gray-f9;
+$public-text-primary-color: $default-text-color;
+$public-text-primary-hover-color: $default-text-color;
+$public-text-success-color: $status-success-color;
+$public-text-success-hover-color: $status-success-bg-color;
+$public-text-info-color: $status-processing-color;
+$public-text-info-hover-color:$status-processing-color;
+$public-text-warning-color: $status-wait-color;
+$public-text-warning-hover-color: $status-wait-color;
+$public-text-danger-color: $status-error-color;
+$public-text-danger-hover-color: $status-error-color;
+$public-text-vaild-color:$text-component-color;
+$public-ant-dropdown-menu-item-color:$gray-66;
+$public-main-blue-color:$bg-active-color;
+// header--------------------------------
+$header-bg-color: $nav-header-bg-color;
+$header-active-color: $white;
+$header-active-bgcolor: $menu-bg-color;
+$header-text-color: $white;
+$header-logo-color: $white;
+$header-ant-badge-bg-color:$status-error-color;
+$header-ant-badge-hover-bg-color:$status-success-color;
+$header-fa-power-hover-color:$white;
+// error组件------------------------------------
+$error-bg-color:$text-component-color;
+$error-border-color: $border-color-base;
+// 显示字段按钮----------------------------
+$table-header-show-btn-all-sel-border:$border-color-base;
+$table-header-show-btn-dropdown-shadow:rgba($black, 0.175);
+$table-header-show-btn-dropdown-item-hover:$bg-item-hover-color;
+/***********************components中的组件end*****************************/
+/***********************模块中的start*************************************/
+// 数据源管理-----------------------
+$datasource-manage-bg:$bg-main-color;
+$datasource-manage-panel-bg:$white;
+$datasource-title-panel-color:$menu-submenu-item-color;
+$datasource-title-border-color:$gray-e2;
+$datasource-table-highlight-bg:$bg-item-hover-color;
+$datasource-table-highlight-border:$border-active-color-base;
+$datasource-table-status-success-bg:$status-success-color;
+$datasource-table-status-error-bg:$status-error-color;
+$datasource-info-boxshadow-color:rgba($black,0.15);
+$datasource-info-border-left-color:$border-component-color;
+$datasource-info-status-success:$status-success-color;
+$datasource-info-status-error:$status-error-color;
+$datasource-resize-btn-bg:$gray-d8;
+$datasource-create-link-wait-color: $status-wait-color;
+$datasource-create-link-success-color: $status-other-finish;
+$datasource-create-link-error-color: $status-error-color;
+$datasource-create-link-runing-color: $status-processing-color;
+$datasource-create-link-wait-bg-color: $status-wait-bg-color;
+$datasource-create-link-success-bg-color: $status-success-bg-color;
+$datasource-create-link-error-bg-color: $status-error-bg-color;
+$datasource-create-link-runing-bg-color: $status-processing-bg-color;
+
+$datasource-sync-status-delete-color: $status-error-color;
+$datasource-sync-status-delete-bg-color: $status-error-bg-color;
+$datasource-sync-status-synced-color: $status-processing-color;
+$datasource-sync-status-synced-bg-color: $status-processing-bg-color;
+$datasource-sync-status-refreshed-color: $status-success-color;
+$datasource-sync-status-refreshed-bg-color: $status-success-bg-color;
+$datasource-sync-sel-num-color:$text-component-color;
+$datasource-sync-list-no-text-color:$stress-color;
+
+$datasource-origin-field-tag-purple-border-color:$bg-component-color;
+$datasource-origin-field-tag-orange-border-color:$status-wait-color;
+$datasource-origin-field-tag-orange-bg-color:$status-wait-bg-color;
+$datasource-origin-field-tag-green-border-color:$status-success-color;
+$datasource-origin-field-tag-green-bg-color:$status-success-bg-color;
+$datasource-sync-list-active-bg-color:$bg-component-color;
+$datasource-sync-list-active-text-color:$white;
+/***********************模块中的end*************************************/

@@ -1,0 +1,40 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": [
+      "jsdoc",
+      "closure"
+    ]
+  },
+  "source": {
+    "includePattern": ".+\\.js(doc)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "plugins": [],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "systemName": "DataCloud",
+    "footer": "",
+    "copyright": "2015-2016",
+    "includeDate": false,
+    "navType": "vertical",
+    "linenums": false,
+    "theme": "cerulean",
+    "collapseSymbols": false,
+    "inverseNav": false,
+    "outputSourceFiles": false,
+    "outputSourcePath": true,
+    "dateFormat":"yyyy-MM-dd",
+    "syntaxTheme":"default"
+  },
+  "opts": {
+    "template": "templates/cerulean",
+    "encoding": "utf8",
+    "destination": "./doc",
+    "package": "./package.json",
+    "recurse": true,
+    "query": "value",
+    "private": true
+  }
+}

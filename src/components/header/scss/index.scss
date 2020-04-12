@@ -1,0 +1,54 @@
+.header {
+    @include size(100%, $height-nav);
+    background-color: $header-bg-color;
+    overflow: hidden;
+    font-size: 16px;
+
+    :global {
+        .app-title {
+            margin-right: 88px;
+            height: $height-nav;
+            line-height: $height-nav;
+
+            .logo-href {
+                @include size(100%, 100%);
+                display: inline-block;
+            }
+
+            .logo {
+                margin-right: $space-md;
+                margin-left: $space-lg;
+                color: $header-logo-color;
+                font-size: 36px;
+            }
+
+            .app-name {
+                vertical-align: top;
+                line-height: $height-nav;
+                color: $white;
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+
+        .navigation {
+            height: $height-nav;
+            overflow: hidden;
+
+            .active {
+                color: $header-active-color !important;
+                font-weight: 700;
+            }
+
+            .cona {
+                font-size: 14px;
+            }
+        }
+
+        .headrright {
+            height: $height-nav;
+            overflow: hidden;
+            color: $header-text-color;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.hresize-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    :global {
+        .hresize-left {
+            position: absolute;
+            right: calc(50% - 24px);
+            left: 0;
+            height: 100%;
+        }
+
+        .h-resize {
+            position: absolute;
+            left: 100px;
+            z-index: 1;
+            cursor: col-resize;
+            width: $space-lg;
+            height: 100%;
+            user-select: none;
+
+            // &.mouse-resize{
+            //   width: 2px;
+            //   background: $gray-99;
+            // }
+        }
+
+        .hresize-right {
+            position: absolute;
+            right: 0;
+            height: 100%;
+        }
+    }
+}

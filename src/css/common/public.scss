@@ -1,0 +1,349 @@
+@charset "utf-8";
+
+//浏览器ie版本小于10提示框样式
+.browsehappy {
+  margin: 0.2em 0;
+  background: $gray-d8;
+  color: $black;
+  padding: 0.2em 0;
+}
+
+html,
+body {
+  font-family: $font-family;
+  font-size: 14px;
+  background-color: $white;
+  height: 100%;
+  overflow: auto;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.text-hide {
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.affix {
+  position: fixed;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.lead {
+  font-size: 21px;
+}
+
+.small,
+small {
+  font-size: 85%;
+}
+
+.mark,
+mark {
+  padding: 0.2em;
+  background-color: $public-mark-bg-color;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-primary {
+  color: $public-text-primary-color;
+}
+
+a.text-primary:focus,
+a.text-primary:hover {
+  color: $public-text-primary-hover-color;
+}
+
+.text-success {
+  color: $public-text-success-color;
+}
+
+a.text-success:focus,
+a.text-success:hover {
+  color: $public-text-success-hover-color;
+}
+
+.text-info {
+  color: $public-text-info-color;
+}
+
+a.text-info:focus,
+a.text-info:hover {
+  color: $public-text-info-hover-color;
+}
+
+.text-warning {
+  color: $public-text-warning-color;
+}
+
+a.text-warning:focus,
+a.text-warning:hover {
+  color: $public-text-warning-color;
+}
+
+.text-danger {
+  color: $public-text-danger-color;
+}
+
+a.text-danger:focus,
+a.text-danger:hover {
+  color: $public-text-danger-hover-color;
+}
+
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin-bottom: 0;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+dd,
+dt {
+  line-height: 1.42857143;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-left: 0;
+}
+::-moz-selection {
+  background: $public-selection-bg-color;
+  color: $white;
+}
+::selection {
+  background: $public-selection-bg-color;
+  color: $white;
+}
+
+#container {
+  @include size(100%, 100%);
+  min-width: 1440px;
+}
+
+.input-group {
+  display: table;
+  border-collapse: separate;
+}
+/* loading 样式*/
+.loadingdiv {
+    color: $public-loading-color;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: $public-loading-div-bg-color;
+    text-align: center;
+    cursor: progress;
+    z-index: 9999;
+
+    &>div {
+        @include size(80px, 80px);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -40px;
+        margin-top: -40px;
+    }
+}
+
+// 显示字段btn样式
+.check-header {
+    background: $white;
+    max-width: 400px;
+    padding: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px $table-header-show-btn-dropdown-shadow;
+    max-height: 600px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+
+    .check-all {
+        border-bottom: 1px solid $table-header-show-btn-all-sel-border;
+    }
+
+    .ant-checkbox-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ant-checkbox-wrapper {
+        padding: 3px 10px 3px 18px;
+        margin: 0 !important;
+
+        &:hover {
+            background: $table-header-show-btn-dropdown-item-hover;
+        }
+    }
+}
+
+// 新增编辑数据源弹框
+.credit-datasource{
+    .ant-modal {
+        top: 100px;
+        padding: 0;
+    }
+    @media (max-width:1440px){
+        .ant-modal {
+            top: 40px;
+            padding: 0;
+        }
+    }
+    
+    .ant-modal-content .ant-modal-body{
+        max-height: 660px;
+    }
+}
+
+
+// framework中弹框的统一样式修改
+.dialog-common {
+    .ant-modal-body {
+        padding: 0;
+        padding-bottom: $space-sm;
+    }
+
+    .main-content-modal {
+        height: calc(100% - #{$space-sm} - #{$height-sm});
+        overflow-y: auto;
+        padding: $space-lg;
+        padding-bottom: $space-lg;
+        border-bottom: 1px solid $border-color-base;
+    }
+
+    .dialog-footer-btn-group {
+        margin-top: $space-sm;
+        padding: 0 $space-lg;
+        text-align: right;
+
+        &.footer-btn-group {
+            text-align: right;
+        }
+
+        .ant-btn {
+            margin-right: 0;
+
+            &:not(:last-child) {
+                margin-right: $space-md;
+            }
+        }
+    }
+}
+
+

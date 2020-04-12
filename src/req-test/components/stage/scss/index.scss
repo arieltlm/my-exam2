@@ -1,0 +1,36 @@
+
+:global {
+    $stage-space: 60px;
+
+    .stage {
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+        width: 300px;
+
+        &:not(:last-child) {
+            margin-right: $stage-space;
+        }
+
+        .title {
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        &:first-child {
+            .job {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
+        &:last-child {
+            .job {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
